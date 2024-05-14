@@ -1,0 +1,97 @@
+/* Estilos para el menú de funcionarios */
+
+.menu-container {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.boton-volver {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu {
+    margin-bottom: 20px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.submenu {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.submenu li {
+    margin-bottom: 10px;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu a:hover {
+    color: #007bff;
+}
+
+.contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.encabezado {
+    margin-bottom: 20px;
+}
+
+.titulo-menu {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contenedor-central {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagen-texto {
+    flex: 0 0 auto;
+}
+
+.texto {
+    margin-left: 20px;
+}
+
+.pie-pagina {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}

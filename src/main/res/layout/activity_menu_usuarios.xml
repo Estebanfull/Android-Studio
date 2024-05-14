@@ -1,0 +1,208 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:theme="@style/AppTheme"
+    android:id="@+id/layout">
+
+    <!-- Encabezado -->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Botón de menú -->
+        <Button
+            android:id="@+id/menu_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☰"
+            android:onClick="toggleSubMenu" />
+
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+    </FrameLayout>
+    <!-- Contenido del menú -->
+    <ScrollView
+        android:id="@+id/menu_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/menu_asistencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asistencia"
+                android:onClick="toggleAsistenciaSubMenu" />
+
+            <LinearLayout
+                android:id="@+id/submenu_asistencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/crear_asistencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear"
+                    android:onClick="navigateToCreateAsistencia" />
+
+                <Button
+                    android:id="@+id/modificar_asistencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modificar"
+                    android:onClick="navigateToModifyAsistencia" />
+
+                <Button
+                    android:id="@+id/eliminar_asistencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar"
+                    android:onClick="navigateToDeleteAsistencia" />
+                >
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/menu_Perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:onClick="togglePerfilSubMenu" />
+
+            <LinearLayout
+                android:id="@+id/submenu_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+
+                <Button
+                    android:id="@+id/modificar_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modificar"
+                    android:onClick="navigateToModifyPerfil" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="696dp"
+        android:layout_below="@id/menu_scroll"
+        android:orientation="vertical">
+
+        <!-- Encabezado -->
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="Bienvenido Colaborador"
+            android:textSize="24sp" />
+
+        <!-- Contenido central -->
+
+        <!-- Pie de página -->
+
+        <LinearLayout
+            android:id="@+id/central_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <!-- Contenido central -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <!-- Imagen -->
+                <ImageView
+                    android:id="@+id/central_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="244dp"
+                    android:src="@drawable/imagen_1" />
+
+                <!-- Texto -->
+                <LinearLayout
+                    android:id="@+id/text_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/central_image"
+                    android:layout_alignStart="@id/central_image"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/about_title"
+                        android:layout_width="115dp"
+                        android:layout_height="52dp"
+                        android:text="Acerca de"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/about_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="115dp"
+                        android:text="Fundada en 1988, somos una empresa mexicana con más de 30 años de experiencia y con presencia en 4 países de Latinoamérica. Lo que nos inspira es hacer más sencilla la vida de las personas a través de soluciones hechas a la medida." />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/footer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Hecho por Ike Asistencia" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IkeAsistencia</string>
+    <string name="funcionario">Funcionario</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="olvid_o_bloque_su_contrase_a">¿Olvidó o bloqueó su contraseña?</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="hecho_por_ike_asistencia">Hecho por Ike Asistencia</string>
+    <string name="usuario">Usuario</string>
+    <string name="Usuario">Usuario</string>
+    <string name="error_message">Error</string>
+    <string name="Funcionario">Funcionario</string>
+
+</resources>
